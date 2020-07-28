@@ -23,4 +23,9 @@ class LinkedList
     return 0 if !@head
     whole_list.count
   end 
+
+  def to_string
+    names = whole_list.map { |node| node.surname }.join("")
+    "The #{names} family"
+  end 
 end 
