@@ -22,4 +22,17 @@ class LinkedListTest < Minitest::Test
     assert_instance_of Node, @list.head
     assert_nil @list.head.next_node
   end
+
+  def test_linked_list_in_array
+    @list.append("West")
+
+    assert_instance_of Node, @list.whole_list.first
+  end 
+
+  def test_count_nodes
+    assert_equal 0, @list.count
+    
+    @list.append("West")
+    assert_equal 1, @list.count
+  end
 end 
